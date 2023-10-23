@@ -31,7 +31,7 @@ body{
 }
 
 .logo{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     height: 15%;
     position: absolute;
     top: 25%;
@@ -74,9 +74,11 @@ figcaption{
 }
 
 p{
-    font-weight: bold;
-    /* letter-spacing: -1px; */
+    font-weight: 600;
+    font-size: 0.9em;
+
     max-width: 35em;
+
 }
 
 .top-section{
@@ -124,19 +126,38 @@ p{
 
     max-height: 50%;
 
+    position: relative;
+
 
 }
 
 input{
     font-family: inherit;
     font-size: 70%;
-
+   
     width: 10rem;
     
+    border: 1px solid #E5E7EB;
+    border-radius: 2px;
+}
+
+input:focus{
+    border-color: rgb(155, 214, 250);
+    box-shadow: 0 0 2px rgba(2, 117, 232, 0.1);
+}
+
+
+input:invalid{
+    border-color: rgb(243, 40, 40);
+}
+
+input:required{
+    border: 1px solid #E5E7EB;
 }
 
 label{
     font-size: 0.5rem;
+    font-weight: 500;
 }
 
 ul{
@@ -153,7 +174,7 @@ li + li {
 .login {
     font-size: 0.7rem;
 
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 a{
@@ -171,4 +192,18 @@ button{
     border-radius: 4px;
 
     color:white;
+
+    position: absolute;
+
+    bottom: -25%;
+    left: 0%;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 0.7rem;
+}
+.error.active {
+    display: block;
 }

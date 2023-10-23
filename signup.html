@@ -23,7 +23,7 @@
                     <p>You <em>know</em> you wanted to.</p>
                     <p>Let's do this!</p>
                 </div>
-                <form class="form-section">
+                <form class="form-section" id="signup-form">
                     <section class="left-form">
                         <ul>
                             <li><label for="first-name">FIRST NAME</label></li>
@@ -32,7 +32,10 @@
                             <li><input type="email" id="email" name="email"></li>
                             <li><label for="password">PASSWORD</label></li>
                             <li><input type="password" id="password" name="password" required></li>
+                            <li><span class="error" id="password-error"></span></li>
                         </ul>
+
+                        <button class="signup" type="submit">Create Account</button>
                     </section>
                     <section class="right-form">
                         <ul>
@@ -47,11 +50,30 @@
                 </form>
             </div>
             <div class="bottom-section">
-                <button class="signup">Create Account</button>
+                
                 <p class="login">Already have an account?<a href=""> Log in</a></p>
             </div>
         </div>
     </div>
     
 </body>
+<script>
+
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+    const passwordError = document.getElementById("password-error");
+
+    if (password !== confirmPassword) {
+        // Passwords do not match; show the error message
+        passwordError.classList.add("active");
+        passwordError.textContent = "Passwords do not match";
+        event.preventDefault(); // Prevent form submission
+    } else {
+        // Passwords match; continue with form submission
+        passwordError.classList.remove("active");
+        passwordError.textContent = "";
+    }
+});
+</script>
 </html>
