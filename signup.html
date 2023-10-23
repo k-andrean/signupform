@@ -4,43 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <div class="container">
         <div class="image-container">
             <div class="logo">
-                <img src="/image/logo.png" alt="Odin logo">
-                <span>ODIN</span>
+                <img src="image/logo.png" alt="Odin logo" class="image-logo">
+                <span class="image-text">ODIN</span>
             </div>
             <figcaption>Photo by Halle West on Unsplash</figcaption>
         </div>
         <div class="form-container">
             <div class="top-section">
-                <p>This is not real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-                <p>You <em>know</em> you wanted to.</p>
-                <p>Let's do this!</p>
+                <div class="para-section">
+                    <p>This is not real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                    <p>Sign up <em>now</em> to get started.</p>
+                    <p>You <em>know</em> you wanted to.</p>
+                    <p>Let's do this!</p>
+                </div>
                 <form class="form-section">
                     <section class="left-form">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name" required placeholder="Thor">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required>
+                        <ul>
+                            <li><label for="first-name">FIRST NAME</label></li>
+                            <li><input type="text" id="first-name" name="first-name" required placeholder="Thor"></li>
+                            <li><label for="email">EMAIL</label></li>
+                            <li><input type="email" id="email" name="email"></li>
+                            <li><label for="password">PASSWORD</label></li>
+                            <li><input type="password" id="password" name="password" required></li>
+                        </ul>
                     </section>
                     <section class="right-form">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Odinson">
-                        <label for="phone-number">NUMBER</label>
-                        <input type="number" id="phone-number" name="phone-number">
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <ul>
+                            <li><label for="last-name">LAST NAME</label></li>
+                            <li><input type="text" id="last-name" name="last-name" placeholder="Odinson"></li>
+                            <li><label for="phone-number">NUMBER</label></li>
+                            <li><input type="number" id="phone-number" name="phone-number"></li>
+                            <li><label for="confirm-password">CONFIRM PASSWORD</label></li>
+                            <li><input type="password" id="confirm-password" name="confirm-password" required></li>
+                        </ul>
                     </section>
                 </form>
             </div>
             <div class="bottom-section">
                 <button class="signup">Create Account</button>
-                <p class="login">Already have an account?><a href=""> Log in</a></p>
+                <p class="login">Already have an account?<a href=""> Log in</a></p>
             </div>
         </div>
     </div>
