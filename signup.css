@@ -1,14 +1,13 @@
 @font-face {
-    font-family: 'NorseBold';
+    font-family: 'NorseBold'; /*font style to be used for odin logo*/
     src: url(font/Norse-Bold.otf) format('opentype');
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 *{
     box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -22,15 +21,17 @@ body{
     display:flex;
 }
 
+/* CSS for left side containing image and background */
 .image-container{
     width: 30%;
     max-height: 100%;
-    background-image: url('image/background.jpg');
+    background-image: url('image/background.jpg'); 
     background-size: 100% 100%;
     position: relative;
 }
 
-.logo{
+
+.logo-container{
     background-color: rgba(0, 0, 0, 0.5);
     height: 15%;
     position: absolute;
@@ -44,6 +45,8 @@ body{
     justify-content: center;
 }
 
+
+/* CSS for the image and text within the logo container */
 .image-logo{
     max-width: 100%; 
     max-height: 80%; 
@@ -54,6 +57,8 @@ body{
     font-size: 3rem;
 }
 
+
+/* CSS for the caption at the bottom center of the bacground image inside image container */
 figcaption{
     position: absolute;
     bottom: 0;
@@ -65,7 +70,8 @@ figcaption{
 }
 
 
-.form-container{
+/* right container containing form and paragraph element css below */
+.body-container{
     width: 70%;
     max-height: 100%;
     display: flex;
@@ -73,14 +79,7 @@ figcaption{
     gap: 1rem;
 }
 
-p{
-    font-weight: 600;
-    font-size: 0.9em;
-
-    max-width: 35em;
-
-}
-
+/* CSS for the top section within the right container */
 .top-section{
     max-height: 80%;
     max-width: 100%;
@@ -89,11 +88,19 @@ p{
     border-bottom: 4px solid #ddd; 
 }
 
-.bottom-section{
-    max-height: 20%;
-    max-width: 100%;
+/* CSS for paragraph section before form element */
+.para-section{
 
-    padding: 0rem 8rem 2rem 2rem;
+    max-height: 50%;
+
+}
+
+p{
+    font-weight: 600;
+    font-size: 0.9em;
+
+    max-width: 35em;
+
 }
 
 .para-section > p:nth-child(3){
@@ -110,13 +117,8 @@ p{
     margin-top: 0;
 }
 
-.para-section{
 
-    max-height: 50%;
-
-}
-
-
+/* css containing form elements below */
 .form-section{
     display: flex;
     gap: 20%;
@@ -131,6 +133,7 @@ p{
 
 }
 
+/* CSS for styling input and label element */
 input{
     font-family: inherit;
     font-size: 70%;
@@ -160,27 +163,29 @@ label{
     font-weight: 500;
 }
 
+/* CSS for list styling */
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
 li + li {
     margin: 5px 0px;
 }
 
-.login {
-    font-size: 0.7rem;
-
-    margin-top: 2rem;
-}
-
-a{
+/* CSS for span element below */
+.error {
+    display: none;
+    color: red;
     font-size: 0.7rem;
 }
+.error.active {
+    display: block;
+}
 
+
+/* CSS for button style */
 button{
     background-color: #596D48;
     font-family: inherit;
@@ -199,11 +204,22 @@ button{
     left: 0%;
 }
 
-.error {
-    display: none;
-    color: red;
-    font-size: 0.7rem;
+
+
+/* CSS for bottom section containing login link and text */
+.bottom-section{
+    max-height: 20%;
+    max-width: 100%;
+
+    padding: 0rem 8rem 2rem 2rem;
 }
-.error.active {
-    display: block;
+
+.login {
+    font-size: 0.7rem;
+
+    margin-top: 2rem;
+}
+
+a{
+    font-size: 0.7rem;
 }
